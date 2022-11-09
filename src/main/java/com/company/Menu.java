@@ -14,7 +14,7 @@ public class Menu {
 
     }
 
-    public Menu(){
+    public void menuSelection(){
         Scanner scan1 = new Scanner(System.in);
 
         displayMenu();
@@ -48,26 +48,43 @@ public class Menu {
         b = sc.nextDouble();
 
         if(parameterInput.equals("+")){
-            result = a + b;
-            System.out.println("Sum is equal to : " + result);
+            System.out.print("Sum is equal to : " + add(a,b));
         }
         else if(parameterInput.equals("-")){
-            result = a - b;
-            System.out.println("Subtraction is equal to : " + result);
+
+            System.out.println("Subtraction is equal to : " + sub(a,b));
         }
         else if(parameterInput.equals("*")){
-            result = a * b;
-            System.out.println("Multiplication is equal to : " + result);
+            System.out.println("Multiplication is equal to : " + mul(a,b));
         }
         else if(parameterInput.equals("/") && ((a > 0 ) && (b > 0))){
-            result = a / b;
-            System.out.println("Division is equal to : " + result);
+            System.out.println("Division is equal to : " + div(a,b));
         }else if ((a == 0) || (b == 0) && parameterInput.equals("/")){
             System.out.println("Cannot divide by 0");
         }
     }
-    public void ExponentialCalculation(){
+    public double add(double number1, double number2){
+        return number1 + number2;
+    }
+    public double sub(double number1, double number2){
+        return number1 - number2;
+    }
+    public double mul(double number1, double number2){
+        return number1 * number2;
+    }
+    public double div(double number1, double number2){
+        return number1 / number2;
+    }
+
+    public double exp(double number1, double number2){
+        return Math.pow(number1, number2);
+    }
+    public double squareRoot(double number){
+        return Math.sqrt(number);
+    }
+    public double ExponentialCalculation(){
         double a, b;
+        double result;
         System.out.println("You have chosen option 2, Exponential Calculation!");
         System.out.println("Please type the Base parameter");
         Scanner sc = new Scanner(System.in);
@@ -75,14 +92,16 @@ public class Menu {
         System.out.println("Please type the Exponent parameter");
         b = sc.nextDouble();
         System.out.println(a + " Power of " + b +" is equal to : " + Math.pow(a,b));
+        result = exp(a,b);
+        return result;
     }
-    public void SquareRootOperation(){
+    public double SquareRootOperation(){
         double a;
         System.out.println("You have chosen option 3, Square Root Calculation!");
         System.out.println("Please type a parameter");
         Scanner sc = new Scanner(System.in);
         a = sc.nextDouble();
         System.out.println("Square Root of " + a +" is equal to : " + Math.sqrt(a));
-
+        return squareRoot(a);
     }
 }
