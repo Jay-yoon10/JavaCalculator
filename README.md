@@ -6,8 +6,8 @@
 
 <hr/>
 <p>
-<img src="https://img.shields.io/badge/Java-D9DDDC?style=flat-square&logo=Java&logoColor=white" />
-<img src="https://img.shields.io/badge/Junit-D9DDDC?style=flat-square&logo=Junit&logoColor=white" />
+<img src="https://img.shields.io/badge/Java-D9DDDC?style=for-the-badge" /> 
+<img src="https://img.shields.io/badge/junit-D9DDDC?style=for-the-badge" /> 
 </p>
 
 ## **_PROJECT GOAL_**
